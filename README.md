@@ -50,6 +50,7 @@ Some notes about the input format:
 2) The program accepts multiple keywords with the delimiter- " " and only a single job category.
 3) The Program will exit after displaying an error message if the category entered is not in the Job Category list.
 (This was done as the Job Category is a select element on the website.) 
+4) Also, Since some of the Descriptions of the Jobs themselves have commas and so the .CSV format didn't work out so well and hance, I have stored in lists and the output is stored in a .txt file neatly!
 
 ### Note[4]: 
 3 Files are added in the locaton : emptor\tutorial\spiders as soon as you the program finishes. 
@@ -58,4 +59,6 @@ Some notes about the input format:
 3) output_data.txt: stores the scraped data in an orderly manner. 
 
 ( The output data can be easily stored in other data formats and can be used for data analytics if needed )
-P.S: Since some of the names themselves have commas, the .CSV format didn't work out so well!
+
+### Note[5]:
+The website reuired a button click to sbutmit the keywords and the category which is done by interacting with JavaScript (everything is done on the front-end) and since Scrapy cannot interpret javascript, I have used selenium. 
