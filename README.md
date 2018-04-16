@@ -18,13 +18,16 @@ For the following site: https://www.federalreserve.gov/start-job-search.htm crea
 ## How to run: 
 1) install latest Chrome Browser 
 2) install python3 and the modules required: scrapy and selenium 
-3) open the terminal in the location "*\emptor\tutorial\spiders"
-4) run the spider using " scrapy crawl fed_reserve_jobs *...* "
+4) run the "chromedriver.exe" file
+5) add the location of "chrome.exe" (the executable file of the chrome browser) and the location of "chromedriver.exe" (the executable file of the chrome browser which is in the repository) to the PATH Environment variable.
+Referal: https://www.java.com/en/download/help/path.xml
+6) Restart your system ( sorry about this setup process, but I just learned scrappy )
+4) run the spider using the " scrapy crawl fed_reserve_jobs *...* " command and view the results in the same folder!
 
 ### Note[1]: 
 The ChromeDriver should work on it's own, if the error - " PATH NOT FOUND" comes then please follow the steps given below:
 1) download the chrome driver using the above link, and copy it's path to the "chrome_path" variable and retry!
-2) if that still does not work, add the path of the Chrome Browser and the chromeDriver to the environments path variable.
+2) if that still does not work, add the path of the Chrome Browser and the chromeDriver both to the environment path variable.
 https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/amp/
 https://www.windows-commandline.com/set-path-command-line/
 ##### please restart the system after doing so and then re-run!
@@ -33,9 +36,12 @@ https://www.windows-commandline.com/set-path-command-line/
 If the program gives incorrect output:
 1) re-run the program and check again.
 2) if it still gives you the incorrect output, then delete the pycache folder present in emptor\tutorial\spiders
+( this was a bug in my sistem, does not have to be in yours, but this is a fix if it does happen)
 
 ### Note[3]: 
 3 Files are added in the locaton : emptor\tutorial\spiders as soon as you run the program. 
 1) search_queries.txt: stores the input details and the result line.
 2) iframe_src.html: the final html response
 3) output_data.txt: stores the scraped data in an orderly manner. 
+
+( The output data can be easily stored in other data formats and can be used for data analytics if needed )
