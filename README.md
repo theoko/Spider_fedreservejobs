@@ -20,14 +20,13 @@ For the following site: https://www.federalreserve.gov/start-job-search.htm crea
 1) install latest Chrome Browser 
 2) install python3 and the modules required: scrapy and selenium 
 4) run the "chromedriver.exe" file
-5) add the location of "chrome.exe" (the executable file of the chrome browser) and the location of "chromedriver.exe" (the executable file of the chrome browser which is in the repository) to the PATH Environment variable.
-Referal: https://www.java.com/en/download/help/path.xml
+5) add the location of "chrome.exe" (the executable file of the chrome browser) and the location of "chromedriver.exe" (the executable file of the chrome browser which is in the repository) to the PATH Environment variable. https://www.java.com/en/download/help/path.xml
 6) Restart your system ( sorry about this setup process, but I just learned scrappy and I don't want anything to go wrong :p )
 7) open the python terminal in the repository's "emptor\tutorial\spiders" folder.
 8) run the spider using the " scrapy crawl fed_reserve_jobs *...* " command and view the results in the same folder!
 
 ### Note[1]: 
-The ChromeDriver should work on it's own, if the error - " PATH NOT FOUND" comes then please follow the steps given below:
+The ChromeDriver should work on it's own, if the error - " PATH NOT FOUND" or " *** NEEDS TO BE IN the ENVIRONMENT PATH VARAIBLE" comes then please follow the steps given below:
 1) download the chrome driver using the above link, and copy it's path to the "chrome_path" variable and retry!
 2) if that still does not work, add the path of the executable files of the Chrome Browser and the chromedriver both to the environment path variable.
 
@@ -36,7 +35,7 @@ Referal:
 
 https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/amp/
 https://www.windows-commandline.com/set-path-command-line/
-3)
+
 ### Note[2]:
 If the program gives incorrect output:
 1) re-run the program and check again.
@@ -45,12 +44,13 @@ If the program gives incorrect output:
 ( This was a bug i faced in my system, does not have to be in yours, but this was a fix if it does happen)
 
 ### Note[3]:
-Some notes about the input format:
+Some notes about the Program:
 1) The program will only work with the keywords: "keywords" and "category" when you plan to use this option
 2) The program accepts multiple keywords with the delimiter- " " and only a single job category.
 3) The Program will exit after displaying an error message if the category entered is not in the Job Category list.
 (This was done as the Job Category is a select element on the website.) 
-4) Also, Since some of the Descriptions of the Jobs themselves have commas and so the .CSV format didn't work out so well and hance, I have stored in lists and the output is stored in a .txt file neatly!
+4) Also, Since some of the Job Descriptions themselves have commas and so the .CSV format didn't work out so well and hence, I have stored in lists in the program and the output is stored in a .txt file neatly!
+5) The website reuired a button click to sbutmit the keywords and the category which is done by interacting with JavaScript (everything is done on the front-end) and since Scrapy cannot interpret javascript, I have used selenium. 
 
 ### Note[4]: 
 3 Files are added in the locaton : emptor\tutorial\spiders as soon as you the program finishes. 
@@ -59,6 +59,3 @@ Some notes about the input format:
 3) output_data.txt: stores the scraped data in an orderly manner. 
 
 ( The output data can be easily stored in other data formats and can be used for data analytics if needed )
-
-### Note[5]:
-The website reuired a button click to sbutmit the keywords and the category which is done by interacting with JavaScript (everything is done on the front-end) and since Scrapy cannot interpret javascript, I have used selenium. 
