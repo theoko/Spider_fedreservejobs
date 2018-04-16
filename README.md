@@ -49,7 +49,7 @@ Some notes about the Program:
 2) The program accepts multiple keywords with the delimiter- " " and only a single job category.
 3) The Program will exit after displaying an error message if the category entered is not in the Job Category list.
 (This was done as the Job Category is a select element on the website.)
-4) The Job Category must be enetered with the proper capitalization, if it does not match the apitalization format of the website then it will consider it an incorrect ategory.
+4) The Job Category must be enetered with the proper capitalization, if it does not match the capitalization format of the website then it will consider it an incorrect category.
 4) Also, Since some of the Job Descriptions themselves have commas and so the .CSV format didn't work out so well and hence, I have stored in lists in the program and the output is stored in a .txt file neatly!
 5) The website reuired a button click to sbutmit the keywords and the category which is done by interacting with JavaScript (everything is done on the front-end) and since Scrapy cannot interpret javascript, I have used selenium. 
 
