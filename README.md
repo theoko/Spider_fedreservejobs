@@ -62,6 +62,6 @@ Some notes about the Program:
 ( The output data can be easily stored in other data formats and can be used for data analytics if needed )
 
 ### Note[5]:
-The files "search_queries.txt", "iframe_src.html" and "output_data.txt" have created by the spider while using the example 
+The files "search_queries.txt", "iframe_src.html" and "output_data.txt" were created by the spider when it was run while using the example: 
  
                               $ scrapy crawl fed_reserve_jobs -a keywords="admin" 
