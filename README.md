@@ -60,3 +60,8 @@ Some notes about the Program:
 3) output_data.txt: stores the scraped data in an orderly manner. 
 
 ( The output data can be easily stored in other data formats and can be used for data analytics if needed )
+
+### Note[5]:
+The files "search_queries.txt", "iframe_src.html" and "output_data.txt" have created by the spider while using the example 
+ 
+                              $ scrapy crawl fed_reserve_jobs -a keywords="admin" 
