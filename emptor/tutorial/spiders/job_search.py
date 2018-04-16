@@ -151,7 +151,7 @@ class fed_reserve_jobs(scrapy.Spider):
 
     	# To create a .TXT File with the Required Extracted Data:
     	f = open("output_data.txt", "w+")
-    	f.write("\nNumber of Jobs Found: " + str(number_of_results))
+    	f.write("\nNumber of Jobs Found: " + str(number_of_results) + "\n")
     	for i in range(number_of_results):
     		f.write("\n" + str(i+1) + "\n Job Description: " + str(name[i]) + "\n Contest Number Value: " + str(cnv[i]) + "\n Posted on Date: " + str(posted_date[i]) + "\n location: "+ str(location[i]) + str("\n"))
     	f.close()
